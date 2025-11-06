@@ -29,7 +29,7 @@ setAdding(false);
 };
 return (
 <div> 
-<button onClick={() => setAdding(true)}>Thêm</button> 
+<button className="btn-new" onClick={() => setAdding(true)}>Thêm</button> 
 {adding && ( 
 <div className="modal-overlay"> 
     <div className="modal-content"> 

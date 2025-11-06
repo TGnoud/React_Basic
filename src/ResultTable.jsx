@@ -44,10 +44,8 @@ function ResultTable({ keyword, user, onAdded }) {
             u.name.toLowerCase().includes(keyword.toLowerCase()) ||
             u.username.toLowerCase().includes(keyword.toLowerCase())
     );
-    if (loading) {
-        return <p>Loading...</p>;
-    }
     return (
+        <> 
         {editing && (
             <div className="modal-overlay">
                 <div className="modal-content">
@@ -78,6 +76,17 @@ function ResultTable({ keyword, user, onAdded }) {
                 </div>
             </div>
         )}
+        <table border ="1" className="result-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
     <tbody>
     {filteredUsers.map((u) => (
         <tr key={u.id}>
@@ -92,7 +101,8 @@ function ResultTable({ keyword, user, onAdded }) {
             </td>
         </tr>
     ))}
-</tbody>
-);
+    </tbody>
+      </table>
+</> );
 }
 export default ResultTable;

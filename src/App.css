@@ -56,31 +56,34 @@ z-index: 999;
 } 
 /* Modal Content */ 
 .modal-content { 
-background: #fff; 
+background: #070606ff; 
 padding: 6px; 
 border-radius: 6px; 
 width: 300px; 
 }
 
-.modal-content h4 {
-  margin-top: 0;
+.search-input {
+  padding: 8px;
+  width: 300px;
+  height: 28px; 
+  font-size: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
-
-.modal-content div {
-  margin-bottom: 10px;
+.btn-edit {
+  background-color: #646cff;
+  margin: 4px;
 }
-
-.modal-content label {
-  display: inline-block;
-  width: 80px;
-  margin-right: 10px;
+.btn-delete {
+  background-color: #ff6464;
+  margin: 4px;
 }
-
-.modal-content input {
-  width: 220px;
-  padding: 5px;
+.btn-new {
+  background-color: #56b6a0ff;
 }
-
-.modal-content button {
-  margin-right: 10px;
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
 }

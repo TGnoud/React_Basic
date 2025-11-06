@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
+import SearchForm from './SearchForm'
+import ResultTable from './ResultTable'
+import AddUser from './AddUser'
 
 function App() {
 const [kw, setKeyword] = React.useState(""); 
@@ -10,7 +11,7 @@ return (
 <div> 
 <SearchForm onChangeValue={setKeyword} /> 
 <AddUser onAdd={setNewUser} /> 
-<ResultTable keyword={kw} user={newUser} onAdded = {() => setNewUser(null)} /> 
+<ResultTable keyword={kw} user={newUser} onAdded={() => setNewUser(null)} />
 </div>
 );
 }
