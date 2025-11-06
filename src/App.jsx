@@ -4,7 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  return <div><h1>Quản lý người dùng</h1></div>;
+const [kw, setKeyword] = React.useState(""); 
+const [newUser, setNewUser] = React.useState(null); 
+return ( 
+<div> 
+<SearchForm onChangeValue={setKeyword} /> 
+<AddUser onAdd={setNewUser} /> 
+<ResultTable keyword={kw} user={newUser} onAdded = {() => setNewUser(null)} /> 
+</div>
+);
 }
 export default App
